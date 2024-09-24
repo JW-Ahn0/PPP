@@ -12,11 +12,11 @@ Programmer Planner for P
 
 ## 타겟 사용자
 
-- 주타켓: 개발자를 준비하는 취업 준비생 25388명
-  (전국 4년제 컴퓨터 학부 졸업생 25388명 (2024 기준)
-  https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources
-  2024년 기준 25388명
-  매년 2만 명 정도 지속적으로 생겨나는 사용자들.
+- 전국 4년제 컴퓨터 학부 졸업 후 개발자를 준비하는 취업 준비생 25,388명 (2024 기준)
+  그리고 매년 2만 명 정도 지속적으로 생겨나는 사용자들
+      ![출처: [SPRi Software Stat - SW 전공 졸업자 현황](https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources)](https://prod-files-secure.s3.us-west-2.amazonaws.com/dbc49794-b983-4f69-8afa-b5c54d5f9b82/30bb6f04-126e-4fa0-9d10-d9ab04b84fb1/image.png)
+
+      출처: [SPRi Software Stat - SW 전공 졸업자 현황](https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources)
 
 ## 핵심 서비스
 
@@ -24,9 +24,9 @@ Programmer Planner for P
 2. 데드라인 지정 기능을 포함한 할 일(Todo)기능
 3. 프로그래머에게 필요한 여러 외부 정보들을 한 곳에서 확인할 수 있는 기능
 
-   (트렌드 git repo , [dev.to](http://dev.to/) 포스팅 , 사람인 채용공고 정보 제공)
+   (트렌드 git repo , dev.to 포스팅 , 사람인 채용공고 정보 제공)
 
-## 유사 서비스는 어떤 서비스를 제공하고 있는지 (컨텐츠 및 사이트 운영 벤치마킹)
+## 컨텐츠 및 사이트 운영 벤치마킹
 
 1. todoist
    - https://todoist.com/ko
@@ -36,15 +36,14 @@ Programmer Planner for P
    - https://ctee.kr/item/store/12960
    - https://tumblbug.com/dailyprescription
 
-## 유사 서비스와 비교하여 어떤 차별화가 있는지 (특징 및 강점)
+## 특징 및 강점
 
 - 다른 플래너들과 다르게 인기 있는 블로그 포스팅 + 채용 공고들을 볼 수 있는 화면등을 제공
 
-## 수익 모델 (옵션)
-
-## 향후 계획 (옵션)
+## 향후 계획
 
 1. 일정의 데드라인이 다가올 때 알림 주는 기능 추가 예정(카톡, 슬랙 등)
+2. TIL 등을 기록할 수 있는 혼자 쓰는 게시판 기능 추가 예정
 
 ## 선정 API 정보
 
@@ -108,4 +107,8 @@ https://www.figma.com/board/rABy13QjbE2yanjU8qYdNc/PPP?node-id=0-1&node-type=can
 
 ## 와이어프레임
 
+https://www.figma.com/design/oWN5AXFZRhXZnMKtmvWC3b/PPP?node-id=0-1&node-type=canvas&t=RpUYiuE9GikM7Gpe-0
+
 ## 디자인 시안
+
+https://www.figma.com/design/oWN5AXFZRhXZnMKtmvWC3b/PPP?node-id=11-5445&node-type=canvas&t=h2KDtvaWdLR13wWs-0
