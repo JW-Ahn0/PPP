@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { FooterLogoListProps } from "../../../types/FooterProps";
 
-export const FooterLogoList = ({ imgList }: FooterLogoListProps) => {
+const FooterLogoList = ({ imgList }: FooterLogoListProps) => {
   return (
     <FooterLogoListWrapper>
       {imgList.map((img, index) => (
@@ -11,6 +11,8 @@ export const FooterLogoList = ({ imgList }: FooterLogoListProps) => {
   );
 };
 
+export default FooterLogoList;
+
 const FooterLogoListWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -19,5 +21,6 @@ const FooterLogoListWrapper = styled.div`
   img {
     width: 60px;
     height: 60px;
+    cursor: pointer;
   }
 `;

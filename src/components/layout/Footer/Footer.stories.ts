@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Footer from "./Footer";
-import { copyRightText } from "../../../constants/FooterConstant";
+import { CopyRightText } from "../../../constants/FooterConstant";
 
 const meta: Meta<typeof Footer> = {
-  title: "Footer",
+  title: "SideBar/Footer",
   component: Footer,
   tags: ["autodocs"],
 };
@@ -11,8 +11,8 @@ const meta: Meta<typeof Footer> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FooterItem: Story = {
+export const defaultState: Story = {
   args: {
-    copyRightText: copyRightText,
+    copyRightText: CopyRightText,
   },
 };

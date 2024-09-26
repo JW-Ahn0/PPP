@@ -1,3 +1,10 @@
+:root {
+  --brand--primary--color: #c5b4fb;
+  --brand--primary--color--rgb: 197, 180, 251;
+  --opacity--30: 0.3;
+  --opacity--60: 0.6;
+}
+
 @font-face {
   font-family: "SpoqaHanSansNeo-Bold";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
@@ -17,4 +24,15 @@
 body {
   font-family: "SpoqaHanSansNeo", sans-serif;
   font-weight: normal;
+}
+html,
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box; /* 모든 요소에 대해 패딩과 테두리를 포함하여 크기 계산 */
 }

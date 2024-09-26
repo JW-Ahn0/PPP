@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { FooterLogoList } from "./FooterLogoList";
+import FooterLogoList from "./FooterLogoList";
 import { FooterimgList } from "../../../constants/FooterConstant";
 import { FooterProps } from "../../../types/FooterProps";
 
