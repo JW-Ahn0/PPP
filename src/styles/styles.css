@@ -4,10 +4,14 @@
   --brand--secondary--color--rgb: 144, 122, 214;
   --brand--primary--color--rgb: 197, 180, 251;
   --brand--border--gray: #e5e5e5;
+  --brand--gray2: #dadada;
+  --brand--gray2--rgb: 218, 218, 218;
+
   --brand--white: #ffffff;
   --brand--sucess: #31d555;
 
   --opacity--30: 0.3;
+  --opacity--50: 0.5;
   --opacity--60: 0.6;
 }
 @font-face {
