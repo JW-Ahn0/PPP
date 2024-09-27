@@ -1,6 +1,12 @@
-# PPP
+# Programmer Planner for P (PPP)
 
-Programmer Planner for P
+# 개발 진행 사항
+
+# 전체 개발 진행사항 10% 완료
+
+## 공통 컴포넌트 개발 25% 완료 (사이드바, 버튼, 체크 박스)
+
+## 스토리북 처음 도입으로 인해 조금 작업 속도가 뎌디지만 계속 진행 중입니다.
 
 ## 기획 배경
 
@@ -14,9 +20,7 @@ Programmer Planner for P
 
 - 전국 4년제 컴퓨터 학부 졸업 후 개발자를 준비하는 취업 준비생 25,388명 (2024 기준)
   그리고 매년 2만 명 정도 지속적으로 생겨나는 사용자들
-      ![출처: [SPRi Software Stat - SW 전공 졸업자 현황](https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources)](https://prod-files-secure.s3.us-west-2.amazonaws.com/dbc49794-b983-4f69-8afa-b5c54d5f9b82/30bb6f04-126e-4fa0-9d10-d9ab04b84fb1/image.png)
-
-      출처: [SPRi Software Stat - SW 전공 졸업자 현황](https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources)
+  출처: [SPRi Software Stat - SW 전공 졸업자 현황](https://stat.spri.kr/posts/view/22272?code=stat_sw_human_resources)
 
 ## 핵심 서비스
 
@@ -60,46 +64,46 @@ Programmer Planner for P
   **용도 : 캘린더 내 한국 공휴일 정보 등록 용도로 사용 ( 사이트에는 없지만 JSON 되는 것 확인 )**
   응답: 아래 처럼 request 날린 경우(10월의 공휴일,)
   getHoliDeInfo?solYear=2024&solMonth=10&\_type=json
-      ```json
-      {
-          "response": {
-              "header": {
-                  "resultCode": "00",
-                  "resultMsg": "NORMAL SERVICE."
-              },
-              "body": {
-                  "items": {
-                      "item": [
-                          {
-                              "dateKind": "01",
-                              "dateName": "임시공휴일",
-                              "isHoliday": "Y",
-                              "locdate": 20241001,
-                              "seq": 2
-                          },
-                          {
-                              "dateKind": "01",
-                              "dateName": "개천절",
-                              "isHoliday": "Y",
-                              "locdate": 20241003,
-                              "seq": 1
-                          },
-                          {
-                              "dateKind": "01",
-                              "dateName": "한글날",
-                              "isHoliday": "Y",
-                              "locdate": 20241009,
-                              "seq": 1
-                          }
-                      ]
-                  },
-                  "numOfRows": 10,
-                  "pageNo": 1,
-                  "totalCount": 3
-              }
-          }
-      }
-      ```
+  `json
+{
+    "response": {
+        "header": {
+            "resultCode": "00",
+            "resultMsg": "NORMAL SERVICE."
+        },
+        "body": {
+            "items": {
+                "item": [
+                    {
+                        "dateKind": "01",
+                        "dateName": "임시공휴일",
+                        "isHoliday": "Y",
+                        "locdate": 20241001,
+                        "seq": 2
+                    },
+                    {
+                        "dateKind": "01",
+                        "dateName": "개천절",
+                        "isHoliday": "Y",
+                        "locdate": 20241003,
+                        "seq": 1
+                    },
+                    {
+                        "dateKind": "01",
+                        "dateName": "한글날",
+                        "isHoliday": "Y",
+                        "locdate": 20241009,
+                        "seq": 1
+                    }
+                ]
+            },
+            "numOfRows": 10,
+            "pageNo": 1,
+            "totalCount": 3
+        }
+    }
+}
+`
 
 ## 사이트맵
 
