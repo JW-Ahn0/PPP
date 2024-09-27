@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { CopyRightText } from "../../../constants/FooterConstant";
 
 const meta: Meta<typeof Footer> = {
-  title: "SideBar/Footer",
+  title: "SlideBar/Footer",
   component: Footer,
   tags: ["autodocs"],
 };

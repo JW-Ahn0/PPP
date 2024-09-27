@@ -3,7 +3,7 @@ import SideBarItem from "./SideBarItem";
 import { FooterListItems } from "../../../constants/FooterConstant";
 
 const meta: Meta<typeof SideBarItem> = {
-  title: "SideBar/SideBarItem",
+  title: "SlideBar/SideBarItem",
   component: SideBarItem,
   tags: ["autodocs"],
 };

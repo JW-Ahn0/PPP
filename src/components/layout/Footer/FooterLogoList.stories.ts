@@ -3,7 +3,7 @@ import FooterLogoList from "./FooterLogoList";
 import { FooterimgList } from "../../../constants/FooterConstant";
 
 const meta: Meta<typeof FooterLogoList> = {
-  title: "SideBar/FooterLogoList",
+  title: "SlideBar/FooterLogoList",
   component: FooterLogoList,
   tags: ["autodocs"],
 };

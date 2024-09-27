@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Logo from "../../common/Logo";
+import Logo from "../../common/Logo/Logo";
 import SideBarItems from "./SideBarItems";
 import Footer from "../Footer/Footer";
 import { CopyRightText } from "../../../constants/FooterConstant";
