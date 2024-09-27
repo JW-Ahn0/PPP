@@ -15,7 +15,6 @@ export default Msg;
 const MsgWrapper = styled.div`
   display: flex;
   align-items: center;
-  flex-dirction: 8px;
   gap: 8px;
   span {
     font-size: 24px;

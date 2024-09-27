@@ -12,14 +12,12 @@ type Story = StoryObj<typeof meta>;
 
 export const TimeState: Story = {
   args: {
-    id: "Times",
     optionList: SelectTimes,
   },
 };
 
 export const MinuteState: Story = {
   args: {
-    id: "Minutes",
     optionList: SelectMinutes,
   },
 };

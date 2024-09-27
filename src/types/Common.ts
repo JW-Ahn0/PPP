@@ -22,10 +22,6 @@ export interface CheckBoxProps {
 }
 
 export interface SelectBoxProps {
-  /** 셀렉트 박스 이름 */
-  name?: string;
-  /** 셀렉트 박스 아이디 */
-  id: string;
   /** 옵션 리스트 */
   optionList: string[];
 }
@@ -38,6 +34,13 @@ export interface MsgProps {
 }
 
 export interface AlertProps {
+  /** 경고 또는 체크 인지 여부에 따라 이미지 변경 */
+  isWarning: boolean;
+  /** 알림 메시지 내용 */
+  MsgStr: string;
+}
+
+export interface ToastProps {
   /** 경고 또는 체크 인지 여부에 따라 이미지 변경 */
   isWarning: boolean;
   /** 알림 메시지 내용 */

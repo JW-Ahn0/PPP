@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { SelectBoxProps } from "../../../types/Common";
 
-const SelectBox = ({ name, id, optionList }: SelectBoxProps) => {
+const SelectBox = ({ optionList }: SelectBoxProps) => {
   const [selectedOption, setSelectedOption] = useState(optionList[0]);
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
 
