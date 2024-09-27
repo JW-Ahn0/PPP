@@ -36,3 +36,10 @@ export interface MsgProps {
   /** 알림 메시지 내용 */
   MsgStr: string;
 }
+
+export interface AlertProps {
+  /** 경고 또는 체크 인지 여부에 따라 이미지 변경 */
+  isWarning: boolean;
+  /** 알림 메시지 내용 */
+  MsgStr: string;
+}

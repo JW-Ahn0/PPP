@@ -116,3 +116,6 @@ export const ModalDeleteMsg = {
   isWarning: true,
   MsgStr: "삭제하시겠습니까?",
 };
+
+export const AlertButtonNoMsg = "아니오";
+export const AlertButtonYesMsg = "네";
