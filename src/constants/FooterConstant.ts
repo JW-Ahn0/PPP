@@ -106,3 +106,13 @@ export const SelectMinutes = [
   "58",
   "59",
 ];
+
+export const MsgIcons = {
+  checked: "/icons/Checked.svg",
+  warning: "/icons/Warning.svg",
+};
+
+export const ModalDeleteMsg = {
+  isWarning: true,
+  MsgStr: "삭제하시겠습니까?",
+};

@@ -27,3 +27,8 @@ export interface SelectBoxProps {
   /** 옵션 리스트 */
   optionList: string[];
 }
+
+export interface MsgProps {
+  isWarning: boolean;
+  MsgStr: string;
+}
