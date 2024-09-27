@@ -25,6 +25,8 @@ const SideBarWrapper = styled.div`
   flex-direction: column;
   gap: 24px;
   padding: 32px 16px;
+
+  background-color: var(--brand--white);
   hr {
     margin: 0;
     border: none;
