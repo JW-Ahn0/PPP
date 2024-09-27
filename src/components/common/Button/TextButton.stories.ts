@@ -17,9 +17,17 @@ export const defaultState: Story = {
   },
 };
 
-export const activState: Story = {
+export const activeState: Story = {
   args: {
     textStr: "Text",
     isActive: true,
+  },
+};
+
+export const hoverEnabledState: Story = {
+  args: {
+    textStr: "Text",
+    isActive: false,
+    isHoverEnabled: true,
   },
 };

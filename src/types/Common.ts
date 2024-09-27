@@ -3,6 +3,8 @@ export interface TextButtonProps {
   textStr: string;
   /** 선택시 하이라이트 주는 플래그 */
   isActive?: boolean;
+  /** 호버할 때 배경색 변경 되게 할건지 선택하는 플래그 */
+  isHoverEnabled?: boolean;
 }
 
 export interface IconButtonProps {
@@ -29,6 +31,8 @@ export interface SelectBoxProps {
 }
 
 export interface MsgProps {
+  /** 경고 또는 체크 인지 여부에 따라 이미지 변경 */
   isWarning: boolean;
+  /** 알림 메시지 내용 */
   MsgStr: string;
 }

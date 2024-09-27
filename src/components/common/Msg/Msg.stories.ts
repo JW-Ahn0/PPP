@@ -5,6 +5,7 @@ import { ModalDeleteMsg } from "../../../constants/FooterConstant";
 const meta: Meta<typeof Msg> = {
   title: "Common/Msg",
   component: Msg,
+  tags: ["autodocs"],
 };
 
 export default meta;
