@@ -9,3 +9,10 @@ export const FooterListItems: FooterListItem[] = [
   { icon: "/icons/Task.svg", text: "할 일" },
   { icon: "/icons/Microscope.svg", text: "새로운 뉴스" },
 ];
+
+export const IconButtonDefault = {
+  iconPath: "/icons/Plus_default.svg",
+};
+export const IconButtonActive = {
+  iconPath: "/icons/Plus_active.svg",
+};

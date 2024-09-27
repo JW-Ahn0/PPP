@@ -1,6 +1,12 @@
 :root {
   --brand--primary--color: #c5b4fb;
+  --brand--secondary--color: #907ad6;
+  --brand--secondary--color--rgb: 144, 122, 214;
   --brand--primary--color--rgb: 197, 180, 251;
+  --brand--border--gray: #e5e5e5;
+  --brand--white: #ffffff;
+  --brand--sucess: #31d555;
+
   --opacity--30: 0.3;
   --opacity--60: 0.6;
 }
