@@ -46,3 +46,8 @@ export interface ToastProps {
   /** 알림 메시지 내용 */
   MsgStr: string;
 }
+
+export interface BadgeProps {
+  /** 배지 텍스트 */
+  badgeStr: string;
+}
