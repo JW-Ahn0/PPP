@@ -39,3 +39,38 @@ export const reactState: Story = {
     badgeStr: "react",
   },
 };
+
+export const defaultSmallState: Story = {
+  args: {
+    badgeStr: "default",
+    size: "small",
+  },
+};
+
+export const htmlSmallState: Story = {
+  args: {
+    badgeStr: "html",
+    size: "small",
+  },
+};
+
+export const cssSmallState: Story = {
+  args: {
+    badgeStr: "css",
+    size: "small",
+  },
+};
+
+export const javascriptSmallState: Story = {
+  args: {
+    badgeStr: "javascript",
+    size: "small",
+  },
+};
+
+export const reactSmallState: Story = {
+  args: {
+    badgeStr: "react",
+    size: "small",
+  },
+};
