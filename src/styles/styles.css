@@ -6,6 +6,8 @@
   --brand--border--gray: #e5e5e5;
   --brand--gray2: #dadada;
   --brand--gray2--rgb: 218, 218, 218;
+  --brand--gray3: #909cb0;
+  --brand--gray4: #6d73aa;
   --brand--darker--blue: #0e2234;
   --brand--white: #ffffff;
   --brand--sucess: #31d555;
@@ -41,10 +43,10 @@ html,
 body,
 #root {
   height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; /* 모든 요소에 대해 패딩과 테두리를 포함하여 크기 계산 */
 }
