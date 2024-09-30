@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ProfileProps } from "../../../../types/News/News";
+import { ProfileProps } from "../../../../../types/News/News";
 
 const Profile = ({ profileImgPath, name, size }: ProfileProps) => {
   const profileSize = size ? size : "default";

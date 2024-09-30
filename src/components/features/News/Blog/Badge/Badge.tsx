@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BadgeProps } from "../../../../types/News/News";
+import { BadgeProps } from "../../../../../types/News/News";
 
 // 사용할 수 있는 타입 목록
 const BadgeTypes = {
