@@ -15,3 +15,10 @@ export const defaultState: Story = {
     dayStr: "Sep 13, 2022",
   },
 };
+
+export const smallState: Story = {
+  args: {
+    dayStr: "Sep 13, 2022",
+    size: "small",
+  },
+};
