@@ -47,7 +47,4 @@ export interface ToastProps {
   MsgStr: string;
 }
 
-export interface BadgeProps {
-  /** 배지 텍스트 */
-  badgeStr: string;
-}
+export type Size = "default" | "small";

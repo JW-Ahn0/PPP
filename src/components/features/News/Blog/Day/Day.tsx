@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { DayProps } from "../../../../../types/News/News";
+import { DayProps } from "../../../../../types/News/Blog";
 
 const Day = ({ dayStr, size }: DayProps) => {
-  const daySize = size ? size : "default";
+  const daySize = size ? (size === "small" ? size : "default") : "default";
   return <DayWrapper className={daySize}>{dayStr}</DayWrapper>;
 };
 

@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-import { ProfileProps } from "../../../../../types/News/News";
+import { ProfileProps } from "../../../../../types/News/Blog";
 
 const Profile = ({ profileImgPath, name, size }: ProfileProps) => {
-  const profileSize = size ? size : "default";
-
+  const profileSize = size ? (size === "small" ? size : "default") : "default";
   return (
     <ProfileWrapper className={profileSize}>
       <img src={profileImgPath} alt="프로필 이미지" />

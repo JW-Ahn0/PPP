@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
-import { BadgeContainerProps } from "../../../../../types/News/News";
+import { BadgeContainerProps } from "../../../../../types/News/Blog";
 import Badge from "../Badge/Badge";
 
 const BadgeContainer = ({ tagList, size }: BadgeContainerProps) => {
-  const badgeContainerSize = size ? size : "default";
+  const badgeContainerSize = size
+    ? size === "small"
+      ? size
+      : "default"
+    : "default";
   return (
     <BadgeContainerWrapper className={badgeContainerSize}>
       {tagList?.map((tag, index) => (

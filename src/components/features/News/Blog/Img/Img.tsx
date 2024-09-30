@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { ImgProps } from "../../../../../types/News/News";
+import { ImgProps } from "../../../../../types/News/Blog";
 
 const Img = ({ imgPath, size }: ImgProps) => {
-  const daySize = size ? size : "default";
+  const daySize = size ? (size === "small" ? size : "default") : "default";
   return (
     <ImgWrapper
       src={imgPath}

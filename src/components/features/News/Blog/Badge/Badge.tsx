@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BadgeProps } from "../../../../../types/News/News";
+import { BadgeProps } from "../../../../../types/News/Blog";
 
 // 사용할 수 있는 타입 목록
 const BadgeTypes = {
@@ -9,7 +9,7 @@ const BadgeTypes = {
   css: "CSS",
 };
 const Badge = ({ badgeStr, size }: BadgeProps) => {
-  const badgeSize = size ? size : "default";
+  const badgeSize = size ? (size === "small" ? size : "default") : "default";
   const lowerCaseBadgeStr = badgeStr.trim().toLowerCase();
   // badgeStr이 특정 타입에 속하면 해당 타입으로 설정, 그렇지 않으면 기본 타입 설정
   const badgeType =

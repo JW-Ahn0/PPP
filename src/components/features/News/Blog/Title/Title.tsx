@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { TitleProps } from "../../../../../types/News/News";
+import { TitleProps } from "../../../../../types/News/Blog";
 
 const Title = ({ titleStr, size }: TitleProps) => {
-  const titleSize = size ? size : "default";
+  const titleSize = size ? (size === "small" ? size : "default") : "default";
   return <TitleWrapper className={titleSize}>{titleStr}</TitleWrapper>;
 };
 

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BlogContentCardProps } from "../../../../../types/News/News";
+import { BlogContentCardProps } from "../../../../../types/News/Blog";
 import BadgeContainer from "../BadgeContainer/BadgeContainer";
 import Title from "../Title/Title";
 import ProfileDayContainer from "../ProfileDayContainer/ProfileDayContainer";
@@ -14,7 +14,11 @@ const BlogContentCard = ({
   name,
   size,
 }: BlogContentCardProps) => {
-  const blogContentCardSize = size ? size : "default";
+  const blogContentCardSize = size
+    ? size === "small"
+      ? size
+      : "default"
+    : "default";
   return (
     <BlogContentCardWrapper className={blogContentCardSize}>
       <Img imgPath={imgPath} size={blogContentCardSize}></Img>
