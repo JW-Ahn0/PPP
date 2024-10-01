@@ -1,3 +1,4 @@
+import { SwiperRef } from "swiper/react";
 import { Size } from "../Common";
 
 export interface LogoProps {
@@ -28,5 +29,17 @@ export interface SaraminCardProps {
 
   conditionStr: string;
   dateStr: string;
-  size: Size;
+  size?: Size;
+}
+export interface SaraminCardSlideProps {
+  SaraminCardPropsList: SaraminCardProps[];
+  sliderRef: React.RefObject<SwiperRef>; // SwiperRef로 타입을 변경
+}
+
+export interface SaraminCardContainerProps {
+  SaraminCardPropsList: SaraminCardProps[];
+}
+
+export interface SaraminCardListHeaderProps {
+  sliderRef: React.RefObject<SwiperRef>;
 }
