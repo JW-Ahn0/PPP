@@ -1,3 +1,6 @@
+import { MouseEventHandler } from "react";
+import { SwiperRef } from "swiper/react";
+
 export interface TextButtonProps {
   /** Button 내의 텍스트*/
   textStr: string;
@@ -12,6 +15,13 @@ export interface IconButtonProps {
   iconPath: string;
   /** 선택시 하이라이트 주는 플래그 */
   isActive?: boolean;
+}
+
+export interface SlideButtonProps {
+  /** prev | next */
+  type: SlideButtonType;
+  /** onClick 핸들러 */
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface CheckBoxProps {
@@ -48,3 +58,10 @@ export interface ToastProps {
 }
 
 export type Size = "default" | "small";
+
+export type SlideButtonType = "prev" | "next";
+
+export interface ContainerHeaderProps {
+  headerStr: string;
+  sliderRef: React.RefObject<SwiperRef>;
+}

@@ -1,3 +1,4 @@
+import { SwiperRef } from "swiper/react";
 import { Size } from "../Common";
 
 export interface DayProps {
@@ -55,4 +56,11 @@ export interface BlogContentCardProps {
   profileImgPath: string;
   name: string;
   size?: Size;
+}
+export interface BlogContentCardSlideProps {
+  BlogContentCardPropsList: BlogContentCardProps[];
+  sliderRef: React.RefObject<SwiperRef>; // SwiperRef로 타입을 변경
+}
+export interface BlogContentCardContainerProps {
+  BlogContentCardPropsList: BlogContentCardProps[];
 }

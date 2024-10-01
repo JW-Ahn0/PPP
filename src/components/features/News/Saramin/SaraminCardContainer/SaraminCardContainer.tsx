@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import { SaraminCardContainerProps } from "../../../../../types/News/Saramin";
 import { useRef } from "react";
-import SaraminCardListHeader from "../SaraminCardListHeader/SaraminCardListHeader";
 import SaraminCardSlide from "../SaraminCardSlide/SaraminCardSlide";
 import { SwiperRef } from "swiper/react";
+import ContainerHeader from "../../Common/Header/ContainerHeader";
+import { SaraminHeaderStr } from "../../../../../constants/NewsConstant";
 
 const SaraminCardContainer = ({
   SaraminCardPropsList,
@@ -12,7 +13,10 @@ const SaraminCardContainer = ({
 
   return (
     <SaraminCardContainerWrapper>
-      <SaraminCardListHeader sliderRef={sliderRef}></SaraminCardListHeader>
+      <ContainerHeader
+        sliderRef={sliderRef}
+        headerStr={SaraminHeaderStr}
+      ></ContainerHeader>
       <SaraminCardSlide
         SaraminCardPropsList={SaraminCardPropsList}
         sliderRef={sliderRef}

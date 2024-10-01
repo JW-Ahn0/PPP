@@ -1,3 +1,4 @@
+import { SwiperRef } from "swiper/react";
 import { Size } from "../Common";
 
 export interface RepoTitleProps {
@@ -63,4 +64,13 @@ export interface RepoCardProps {
   isDarkMode?: boolean;
   /** size : default  | small */
   size?: Size;
+}
+
+export interface RepoCardSlideProps {
+  RepoCardPropsList: RepoCardProps[];
+  sliderRef: React.RefObject<SwiperRef>; // SwiperRef로 타입을 변경
+}
+
+export interface RepoCardContainerProps {
+  RepoCardPropsList: RepoCardProps[];
 }

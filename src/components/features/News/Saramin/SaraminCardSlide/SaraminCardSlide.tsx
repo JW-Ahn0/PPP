@@ -3,38 +3,14 @@ import SaraminCard from "../SaraminCard/SaraminCard";
 import { SaraminCardSlideProps } from "../../../../../types/News/Saramin";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { swiperSettings } from "../../../../../constants/NewsConstant";
 const SaraminCardSlide = ({
   SaraminCardPropsList,
   sliderRef,
 }: SaraminCardSlideProps) => {
   return (
     <SaraminCardSlideWrapper>
-      <Swiper
-        ref={sliderRef}
-        slidesPerView={1}
-        breakpoints={{
-          500: {
-            slidesPerView: 1,
-          },
-          700: {
-            slidesPerView: 2,
-          },
-          900: {
-            slidesPerView: 3,
-          },
-          1280: {
-            slidesPerView: 4,
-          },
-        }}
-        spaceBetween={30}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-      >
+      <Swiper ref={sliderRef} {...swiperSettings}>
         {SaraminCardPropsList.map((value, index) => (
           <SwiperSlide key={index}>
             <SaraminCard
