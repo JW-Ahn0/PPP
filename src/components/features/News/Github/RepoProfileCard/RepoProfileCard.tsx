@@ -24,7 +24,7 @@ export default RepoProfileCard;
 const RepoProfileCardWrapper = styled.div`
   position: relative;
   // RepoUserProfile을 오른쪽 구석에 위치시키기
-  & > :nth-child(2) {
+  & > :nth-of-type(2) {
     position: absolute;
     bottom: 0;
     transform: translateX(-110%) translateY(-20%);

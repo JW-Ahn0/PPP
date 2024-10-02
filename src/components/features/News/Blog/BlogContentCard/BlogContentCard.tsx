@@ -43,7 +43,8 @@ const BlogContentCardWrapper = styled.div`
   flex-direction: column;
   gap: 12px;
   background-color: var(--brand--white);
-  border-radius: 8px;
+  border: 1px solid var(--brand--gray3);
+  border-radius: 24px;
 
   &.default {
     max-width: 300px;

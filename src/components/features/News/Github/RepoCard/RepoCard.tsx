@@ -37,6 +37,8 @@ const RepoCardWrapper = styled.div`
   padding: 12px;
   gap: 12px;
   border-radius: 8px;
+  border: 1px solid var(--brand--gray3);
+  border-radius: 24px;
   background-color: var(--brand--white);
   &.default {
     max-width: 300px;

@@ -24,4 +24,6 @@ const RepoCardContainer = ({ RepoCardPropsList }: RepoCardContainerProps) => {
 };
 
 export default RepoCardContainer;
-const RepoCardContainerWrapper = styled.div``;
+const RepoCardContainerWrapper = styled.div`
+  padding: 20px;
+`;

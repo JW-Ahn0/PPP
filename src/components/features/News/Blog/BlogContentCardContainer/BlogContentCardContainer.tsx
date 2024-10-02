@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useRef } from "react";
 import { SwiperRef } from "swiper/react";
 import ContainerHeader from "../../Common/Header/ContainerHeader";
-import { GithubHeaderStr } from "../../../../../constants/NewsConstant";
+import { BlogHeaderStr } from "../../../../../constants/NewsConstant";
 import BlogContentCardSlide from "../BlogContentCardSlide/BlogContentCardSlide";
 import { BlogContentCardContainerProps } from "../../../../../types/News/Blog";
 
@@ -15,7 +15,7 @@ const BlogContentCardContainer = ({
     <BlogContentCardContainerWrapper>
       <ContainerHeader
         sliderRef={sliderRef}
-        headerStr={GithubHeaderStr}
+        headerStr={BlogHeaderStr}
       ></ContainerHeader>
       <BlogContentCardSlide
         BlogContentCardPropsList={BlogContentCardPropsList}
@@ -26,4 +26,6 @@ const BlogContentCardContainer = ({
 };
 
 export default BlogContentCardContainer;
-const BlogContentCardContainerWrapper = styled.div``;
+const BlogContentCardContainerWrapper = styled.div`
+  padding: 20px;
+`;

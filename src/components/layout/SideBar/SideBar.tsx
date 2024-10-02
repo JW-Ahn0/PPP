@@ -20,13 +20,12 @@ export default SideBar;
 const SideBarWrapper = styled.div`
   height: 100%;
   max-width: 300px;
-
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 32px 16px;
 
-  background-color: var(--brand--white);
+  background-color: var(--brand--bg-gray);
   hr {
     margin: 0;
     border: none;

@@ -18,6 +18,7 @@ const RepoCardSlide = ({
               repoUserProfileImgPath={value.repoUserProfileImgPath}
               titleStr={value.titleStr}
               descriptionStr={value.descriptionStr}
+              isDarkMode={true}
             ></RepoCard>
           </SwiperSlide>
         ))}

@@ -5,8 +5,9 @@ import SideBarItem from "./SideBarItem";
 const SideBarItems = ({}) => {
   return (
     <SideBarItemsWrapper>
-      {FooterListItems.map((FooterListItem) => (
+      {FooterListItems.map((FooterListItem, index) => (
         <SideBarItem
+          key={index}
           icon={FooterListItem.icon}
           text={FooterListItem.text}
         ></SideBarItem>

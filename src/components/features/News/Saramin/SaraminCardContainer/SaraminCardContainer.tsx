@@ -26,4 +26,6 @@ const SaraminCardContainer = ({
 };
 
 export default SaraminCardContainer;
-const SaraminCardContainerWrapper = styled.div``;
+const SaraminCardContainerWrapper = styled.div`
+  padding: 20px;
+`;
