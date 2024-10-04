@@ -8,13 +8,18 @@ const RepoCard = ({
   repoUserProfileImgPath,
   titleStr,
   descriptionStr,
+  url,
   size,
   isDarkMode,
 }: RepoCardProps) => {
   const darkmode = isDarkMode ? "darkmode" : "";
   const repoCardSize = size ? (size === "small" ? size : "default") : "default";
   return (
-    <RepoCardWrapper className={repoCardSize + " " + darkmode}>
+    <RepoCardWrapper
+      className={repoCardSize + " " + darkmode}
+      href={url}
+      target="_blank"
+    >
       <RepoProfileCard
         repoImgPath={repoImgPath}
         repoUserProfileImgPath={repoUserProfileImgPath}
@@ -30,7 +35,7 @@ const RepoCard = ({
   );
 };
 export default RepoCard;
-const RepoCardWrapper = styled.div`
+const RepoCardWrapper = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +45,12 @@ const RepoCardWrapper = styled.div`
   border: 1px solid var(--brand--gray3);
   border-radius: 24px;
   background-color: var(--brand--white);
+
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+
   &.default {
     max-width: 300px;
   }

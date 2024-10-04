@@ -14,7 +14,9 @@ const TitleWrapper = styled.span`
   -webkit-line-clamp: 2; /* 표시할 줄 수 */
   min-height: 51px;
   max-height: 51px;
+
   color: black;
+
   &.default {
     font-size: 18px;
   }

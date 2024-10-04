@@ -13,9 +13,11 @@ const RepoTitle = ({ titleStr, size, isDarkMode }: RepoTitleProps) => {
 
 export default RepoTitle;
 const RepoTitleWrapper = styled.p`
+  color: black;
+
   font-weight: bold;
   &.default {
-    font-size: 16px;
+    font-size: 14px;
   }
   &.small {
     font-size: 18px;

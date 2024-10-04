@@ -6,22 +6,36 @@ import { fetchData } from "../utils/util";
 import { BlogContentCardProps, DevToResult } from "../types/News/Blog";
 import { useEffect, useState } from "react";
 import { blogParam, convertToBlogItem } from "../utils/blog";
+import { RepoCardProps, RepoToResult } from "../types/News/Repo";
+import { convertToGitHubItem, githubParam } from "../utils/github";
 
 const News = () => {
-  const [blogArguList, setBlogArguList] = useState<BlogContentCardProps[]>([]); // 상태로 관리
-
+  const [blogArguList, setBlogArguList] = useState<BlogContentCardProps[]>([]);
+  const [githubArguList, setGithubArguList] = useState<RepoCardProps[]>([]);
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const result = await fetchData<DevToResult[]>(blogParam); // 비동기 호출
-        console.log(result);
+        const result = await fetchData<DevToResult[]>(blogParam);
         const ArguList = convertToBlogItem(result);
-        setBlogArguList(ArguList); // 변환된 데이터를 상태에 저장
+        setBlogArguList(ArguList);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    fetchBlogData(); // 비동기 함수 호출
+    fetchBlogData();
+
+    const fetchGithubData = async () => {
+      try {
+        const result = await fetchData<RepoToResult>(githubParam);
+
+        const ArguList = convertToGitHubItem(result);
+        setGithubArguList(ArguList);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchBlogData();
+    fetchGithubData();
   }, []);
 
   const githubArgus = {
@@ -30,10 +44,6 @@ const News = () => {
     titleStr: "threejs-portfolio",
     descriptionStr: "Learn how to build 3D websites from scratch ...",
   };
-  const githubArgusArguList = Array.from({ length: 6 }, () => ({
-    ...githubArgus,
-  }));
-
   const saraminArgus = {
     logoImgPath: "/news/saramin_logo.png",
     titleStr: "자동화장비 기술영업 담당자 채용",
@@ -53,9 +63,7 @@ const News = () => {
       <BlogContentCardContainer
         BlogContentCardPropsList={blogArguList}
       ></BlogContentCardContainer>
-      <RepoCardContainer
-        RepoCardPropsList={githubArgusArguList}
-      ></RepoCardContainer>
+      <RepoCardContainer RepoCardPropsList={githubArguList}></RepoCardContainer>
     </NewsWrapper>
   );
 };

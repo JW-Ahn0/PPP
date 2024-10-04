@@ -19,6 +19,7 @@ const RepoCardSlide = ({
               titleStr={value.titleStr}
               descriptionStr={value.descriptionStr}
               isDarkMode={true}
+              url={value.url}
             ></RepoCard>
           </SwiperSlide>
         ))}

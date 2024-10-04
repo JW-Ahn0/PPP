@@ -25,7 +25,6 @@ const BlogContentCard = ({
       className={blogContentCardSize}
       href={url}
       target="_blank"
-      rel="noopener noreferrer"
     >
       <Img imgPath={imgPath} size={blogContentCardSize}></Img>
       <BadgeContainer

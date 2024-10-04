@@ -60,6 +60,8 @@ export interface RepoCardProps {
   titleStr: string;
   /** 레포 설명 */
   descriptionStr: string;
+  /** 레포 링크 */
+  url: string;
   /** 다크모드 유무 */
   isDarkMode?: boolean;
   /** size : default  | small */
@@ -73,4 +75,19 @@ export interface RepoCardSlideProps {
 
 export interface RepoCardContainerProps {
   RepoCardPropsList: RepoCardProps[];
+}
+
+export interface RepoToResult {
+  items: RepoItem[];
+}
+
+interface Owner {
+  login: string;
+  avatar_url: string;
+}
+interface RepoItem {
+  name: string;
+  description: string;
+  html_url: string;
+  owner: Owner;
 }
