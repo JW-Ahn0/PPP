@@ -14,6 +14,7 @@ const Img = ({ imgPath, size }: ImgProps) => {
 
 export default Img;
 const ImgWrapper = styled.img`
+  border-radius: 24px;
   &.default {
     height: 182px;
   }

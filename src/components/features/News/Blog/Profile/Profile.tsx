@@ -17,6 +17,9 @@ const ProfileWrapper = styled.div`
   align-items: center;
   color: var(--brand--gray2);
 
+  img {
+    border-radius: 50%;
+  }
   &.default {
     img {
       width: 27px;

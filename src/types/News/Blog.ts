@@ -56,6 +56,7 @@ export interface BlogContentCardProps {
   profileImgPath: string;
   name: string;
   size?: Size;
+  url: string;
 }
 export interface BlogContentCardSlideProps {
   BlogContentCardPropsList: BlogContentCardProps[];
@@ -63,4 +64,18 @@ export interface BlogContentCardSlideProps {
 }
 export interface BlogContentCardContainerProps {
   BlogContentCardPropsList: BlogContentCardProps[];
+}
+
+export interface DevToResult {
+  cover_image: string;
+  tag_list?: string[];
+  title: string;
+  created_at: string;
+  user: Profile;
+  url: string;
+}
+
+interface Profile {
+  name: string;
+  profile_image: string;
 }

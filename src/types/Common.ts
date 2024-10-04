@@ -65,3 +65,9 @@ export interface ContainerHeaderProps {
   headerStr: string;
   sliderRef: React.RefObject<SwiperRef>;
 }
+
+export interface FetchParams {
+  url: string; // 요청할 URL
+  headers?: Record<string, string>; // 헤더 정보
+  params?: Record<string, any>; // 요청 파라미터
+}

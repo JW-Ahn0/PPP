@@ -10,7 +10,6 @@ const BlogContentCardContainer = ({
   BlogContentCardPropsList,
 }: BlogContentCardContainerProps) => {
   const sliderRef = useRef<SwiperRef>(null);
-
   return (
     <BlogContentCardContainerWrapper>
       <ContainerHeader

@@ -12,6 +12,7 @@ const BlogContentCard = ({
   dayStr,
   profileImgPath,
   name,
+  url,
   size,
 }: BlogContentCardProps) => {
   const blogContentCardSize = size
@@ -20,7 +21,12 @@ const BlogContentCard = ({
       : "default"
     : "default";
   return (
-    <BlogContentCardWrapper className={blogContentCardSize}>
+    <BlogContentCardWrapper
+      className={blogContentCardSize}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Img imgPath={imgPath} size={blogContentCardSize}></Img>
       <BadgeContainer
         tagList={tagList}
@@ -38,13 +44,18 @@ const BlogContentCard = ({
 };
 
 export default BlogContentCard;
-const BlogContentCardWrapper = styled.div`
+const BlogContentCardWrapper = styled.a`
   display: flex;
   flex-direction: column;
   gap: 12px;
   background-color: var(--brand--white);
   border: 1px solid var(--brand--gray3);
   border-radius: 24px;
+
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 
   &.default {
     max-width: 300px;

@@ -2,17 +2,27 @@ import styled from "@emotion/styled";
 import BlogContentCardContainer from "../components/features/News/Blog/BlogContentCardContainer/BlogContentCardContainer";
 import RepoCardContainer from "../components/features/News/Github/RepoCardContainer/RepoCardContainer";
 import SaraminCardContainer from "../components/features/News/Saramin/SaraminCardContainer/SaraminCardContainer";
+import { fetchData } from "../utils/util";
+import { BlogContentCardProps, DevToResult } from "../types/News/Blog";
+import { useEffect, useState } from "react";
+import { blogParam, convertToBlogItem } from "../utils/blog";
 
 const News = () => {
-  const blogArgus = {
-    dayStr: "Sep 13, 2022",
-    profileImgPath: "/news/profile_img.png",
-    name: "Vishal Yadav",
-    imgPath: "/news/blog_img.png",
-    tagList: ["javascript", "react", "html", "css"],
-    blogTitle:
-      "Launching Oxy-UI: A Powerful and Modern UI Library for Your WebProjects",
-  };
+  const [blogArguList, setBlogArguList] = useState<BlogContentCardProps[]>([]); // 상태로 관리
+
+  useEffect(() => {
+    const fetchBlogData = async () => {
+      try {
+        const result = await fetchData<DevToResult[]>(blogParam); // 비동기 호출
+        console.log(result);
+        const ArguList = convertToBlogItem(result);
+        setBlogArguList(ArguList); // 변환된 데이터를 상태에 저장
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchBlogData(); // 비동기 함수 호출
+  }, []);
 
   const githubArgus = {
     repoImgPath: "/news/github_repo_img.png",
@@ -23,7 +33,6 @@ const News = () => {
   const githubArgusArguList = Array.from({ length: 6 }, () => ({
     ...githubArgus,
   }));
-  const blogArguList = Array.from({ length: 6 }, () => ({ ...blogArgus }));
 
   const saraminArgus = {
     logoImgPath: "/news/saramin_logo.png",

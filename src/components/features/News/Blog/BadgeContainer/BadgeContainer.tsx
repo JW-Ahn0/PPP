@@ -20,6 +20,7 @@ const BadgeContainer = ({ tagList, size }: BadgeContainerProps) => {
 export default BadgeContainer;
 const BadgeContainerWrapper = styled.div`
   display: flex;
+  overflow: hidden;
   &.default {
     gap: 6px;
   }
