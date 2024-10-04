@@ -22,10 +22,10 @@ export const swiperSettings = {
     },
   },
   spaceBetween: 30,
-  // loop: true,
-  // // autoplay: {
-  // //   delay: 2500,
-  // //   disableOnInteraction: false,
-  // // },
-  // // modules: [Autoplay],
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  modules: [Autoplay],
 };

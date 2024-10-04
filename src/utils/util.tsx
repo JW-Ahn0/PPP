@@ -18,7 +18,6 @@ export const fetchData = async <T,>({
       const queryParams = new URLSearchParams(params).toString();
       fullUrl += `?${queryParams}`;
     }
-    console.log(fullUrl);
     const response = await fetch(fullUrl, options);
 
     if (!response.ok) {

@@ -9,4 +9,5 @@ export default RecuritCompany;
 const RecuritCompanyWrapper = styled.span`
   font-size: 18px;
   text-decoration: underline;
+  color: black;
 `;

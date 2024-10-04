@@ -10,34 +10,36 @@ const SaraminCard = ({
   logoImgPath,
   titleStr,
   compnayNameStr,
-  locationImgPath,
   conditionStr,
   dateStr,
+  url,
   size,
 }: SaraminCardProps) => {
   const cardSize = size ? (size === "small" ? size : "default") : "default";
   return (
-    <SaraminCardWrapper className={cardSize}>
+    <SaraminCardWrapper className={cardSize} href={url} target="_blank">
       <SaraminLogo imgPath={logoImgPath}></SaraminLogo>
       <RecuritTitle titleStr={titleStr}></RecuritTitle>
       <RecuritCompany compnayNameStr={compnayNameStr}></RecuritCompany>
-      <RecuritCondition
-        imgPath={locationImgPath}
-        conditionStr={conditionStr}
-      ></RecuritCondition>
+      <RecuritCondition conditionStr={conditionStr}></RecuritCondition>
       <RecuritDueDate dateStr={dateStr}></RecuritDueDate>
     </SaraminCardWrapper>
   );
 };
 
 export default SaraminCard;
-const SaraminCardWrapper = styled.div`
+const SaraminCardWrapper = styled.a`
   display: flex;
   flex-direction: column;
   gap: 10px;
   border: 1px solid var(--brand--gray3);
   border-radius: 24px;
   padding: 32px;
+
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 
   &.default {
     max-width: 500px;

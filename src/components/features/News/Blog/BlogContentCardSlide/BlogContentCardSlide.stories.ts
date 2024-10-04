@@ -18,6 +18,7 @@ const testArgus = {
   tagList: ["javascript", "react", "html", "css"],
   blogTitle:
     "Launching Oxy-UI: A Powerful and Modern UI Library for Your WebProjects",
+  url: "/",
 };
 
 const testArguList = Array.from({ length: 6 }, () => ({ ...testArgus }));

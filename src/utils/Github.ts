@@ -1,10 +1,5 @@
 import { FetchParams } from "../types/Common";
-import { BlogContentCardProps, DevToResult } from "../types/News/Blog";
-import {
-  RepoCardProps,
-  RepoContentCardProps,
-  RepoToResult,
-} from "../types/News/Repo";
+import { RepoCardProps, RepoToResult } from "../types/News/Repo";
 
 const githubURL = "https://api.github.com/search/repositories";
 const githubHeaderParams: Record<string, any> = {

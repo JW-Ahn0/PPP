@@ -12,14 +12,13 @@ const BlogCardSlide = ({
   BlogContentCardPropsList,
   sliderRef,
 }: BlogContentCardSlideProps) => {
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+
   useEffect(() => {
     BlogContentCardPropsList.length === 0
       ? setIsLoading(true)
       : setIsLoading(false);
   }, [BlogContentCardPropsList]);
-
-  const [isLoading, setIsLoading] = useState(true); // Loading state
-
   return (
     <BlogCardSlideWrapper>
       {isLoading ? (

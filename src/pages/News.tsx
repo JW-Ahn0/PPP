@@ -5,56 +5,52 @@ import SaraminCardContainer from "../components/features/News/Saramin/SaraminCar
 import { fetchData } from "../utils/util";
 import { BlogContentCardProps, DevToResult } from "../types/News/Blog";
 import { useEffect, useState } from "react";
-import { blogParam, convertToBlogItem } from "../utils/blog";
+import { blogParam, convertToBlogItem } from "../utils/Blog";
 import { RepoCardProps, RepoToResult } from "../types/News/Repo";
-import { convertToGitHubItem, githubParam } from "../utils/github";
+import { convertToGitHubItem, githubParam } from "../utils/Github";
+import { convertToSaraminItem, tempSaraminParam } from "../utils/Saramin";
+import { SaraminCardProps, SaraminToResult } from "../types/News/Saramin";
+import { FetchParams } from "../types/Common";
 
 const News = () => {
   const [blogArguList, setBlogArguList] = useState<BlogContentCardProps[]>([]);
   const [githubArguList, setGithubArguList] = useState<RepoCardProps[]>([]);
+  const [saraminArgusList, setSaraminArgusList] = useState<SaraminCardProps[]>(
+    []
+  );
+
   useEffect(() => {
-    const fetchBlogData = async () => {
+    const fetchAndSetData = async <T,>(
+      fetchParams: FetchParams,
+      convertFunction: (data: T) => any,
+      setStateFunction: React.Dispatch<React.SetStateAction<any>>
+    ) => {
       try {
-        const result = await fetchData<DevToResult[]>(blogParam);
-        const ArguList = convertToBlogItem(result);
-        setBlogArguList(ArguList);
+        const result = await fetchData<T>(fetchParams);
+        const ArguList = convertFunction(result);
+        setStateFunction(ArguList);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    fetchBlogData();
 
-    const fetchGithubData = async () => {
-      try {
-        const result = await fetchData<RepoToResult>(githubParam);
-
-        const ArguList = convertToGitHubItem(result);
-        setGithubArguList(ArguList);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchBlogData();
-    fetchGithubData();
+    fetchAndSetData<DevToResult[]>(
+      blogParam,
+      convertToBlogItem,
+      setBlogArguList
+    );
+    fetchAndSetData<RepoToResult>(
+      githubParam,
+      convertToGitHubItem,
+      setGithubArguList
+    );
+    fetchAndSetData<SaraminToResult>(
+      tempSaraminParam,
+      convertToSaraminItem,
+      setSaraminArgusList
+    );
   }, []);
 
-  const githubArgus = {
-    repoImgPath: "/news/github_repo_img.png",
-    repoUserProfileImgPath: "/news/github_user_profile.png",
-    titleStr: "threejs-portfolio",
-    descriptionStr: "Learn how to build 3D websites from scratch ...",
-  };
-  const saraminArgus = {
-    logoImgPath: "/news/saramin_logo.png",
-    titleStr: "자동화장비 기술영업 담당자 채용",
-    compnayNameStr: "(주)제일에프에이",
-    conditionStr: "경기전체 | 10년 | 초대졸이상",
-    locationImgPath: "/icons/location.svg",
-    dateStr: "~10.09(수)",
-  };
-  const saraminArgusList = Array.from({ length: 6 }, () => ({
-    ...saraminArgus,
-  }));
   return (
     <NewsWrapper>
       <SaraminCardContainer
@@ -71,5 +67,6 @@ const News = () => {
 export default News;
 
 const NewsWrapper = styled.div`
+  min-width: 300px;
   overflow: auto;
 `;
