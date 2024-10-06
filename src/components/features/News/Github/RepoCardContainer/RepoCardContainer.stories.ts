@@ -13,6 +13,7 @@ const testArgus = {
   repoUserProfileImgPath: "/news/github_user_profile.png",
   titleStr: "threejs-portfolio",
   descriptionStr: "Learn how to build 3D websites from scratch ...",
+  url: "",
 };
 const testArguList = Array.from({ length: 6 }, () => ({ ...testArgus }));
 export const defaultState: Story = {

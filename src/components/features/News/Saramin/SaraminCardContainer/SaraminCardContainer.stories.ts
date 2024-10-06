@@ -15,6 +15,7 @@ const testArgus = {
   conditionStr: "경기전체 | 10년 | 초대졸이상",
   locationImgPath: "/icons/location.svg",
   dateStr: "~10.09(수)",
+  url: "",
 };
 const testArguList = Array.from({ length: 6 }, () => ({ ...testArgus }));
 export const defaultState: Story = {
